@@ -1,0 +1,43 @@
+/*Crie um algoritmo, onde o usuário deve digitar um número inteiro positivo que representa o
+divisor, e encontre o quinto número maior que 1000, onde o resto da divisão feita com o número
+digitado tenha resto 5. O exemplo abaixo representa a entrada e a respectiva saída dada pelo
+algoritmo.
+*/
+
+package e6_lista;
+import java.util.Scanner;
+
+
+/**
+ *
+ * @author reqtr
+ */
+public class E6_Lista {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner sc = new Scanner (System.in);
+        int numero = 1;
+        double y = 0;
+        double x = 0;
+        double z = 0;
+        while (numero >0) {
+            System.out.println("Digite um numero triangular:");
+            numero = sc.nextInt();
+            y = (((2* numero) *4 )+ 1);
+            x = Math.sqrt(y);
+            z = (( -1 + x ));
+            if (z % 2 == 0){
+                System.out.println("O numero " + numero + " e triangular");
+            }
+            else {
+                System.out.println("O numero " + numero + " nao e triangular");
+            }
+        }
+        System.out.println("Obrigado por usar o algoritmo");
+    }
+    
+}
